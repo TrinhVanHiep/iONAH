@@ -14,6 +14,7 @@ import Step1 from "../About/image/step1.png";
 import Step2 from "../About/image/step2.png";
 import Step3 from "../About/image/step3.png";
 import Step4 from "../About/image/step4.png";
+import SliderCustom from "./SliderCustom";
 
 function About() {
   const benefitsTop = [
@@ -233,7 +234,7 @@ function About() {
             </div>
           </div>
           <div className="partner">
-
+            <SliderCustom/>
           </div>
       </div>
     </Layout>

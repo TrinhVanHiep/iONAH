@@ -1,6 +1,6 @@
 // @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
 
-@mixin fontCustomExo($fontSize, $lineHeight, $fontWeight,$letterSpacing) {
+@mixin fontCustomExo($fontSize, $lineHeight, $fontWeight,$letterSpacing:"initial") {
     font-family: "Exo",sans-serif;
     font-style: normal;
     font-size: $fontSize;
@@ -27,41 +27,41 @@
   @mixin content_1280 {
    max-width: 1280px;
    margin: 0 auto;
+   @media (max-width:1300px) {
+    margin: 0 25px;
+   }
   }
 
-  @mixin textHeading {
-    color: #1E24C0;
-  }
-
-  @mixin textTitle {
-    color:  #282828;
-  }
-
-  @mixin textContent {
-    color: #000000;
-  }
-
-  @mixin bgWhite {
-    background-color:#ffffff
-  }
-
-  @mixin bgGray {
-    background-color: #C1C1C1;
-  }
-
+  $text-title :  #282828;
+  $text-heading : #1E24C0;
+  $text-content : #000000;
+  $bg-white : #ffffff;
+  $bg-gray: #C1C1C1;
 
 .about-page {
     h2 {
         @include fontCustomExo(40px,46px,400,0.04em);
-        @include textHeading;
+       color: $text-heading;
+        @media (max-width:1024px) {
+          @include fontCustomExo(32px,46px,400,0.04em);
+        }
     }
     h3 {
         @include fontCustomExo(32px,46px,400,0.04em);
-        @include textHeading;
+       color: $text-heading;
+        @media (max-width:1024px) {
+          @include fontCustomExo(24px,28.13px,400);
+        }
+    }
+    h4 {
+      @include fontCustomRoboto(24px,28.13px,600);
+      @media (max-width:1024px) {
+        @include fontCustomExo(20px,23.13px,600);
+      }
     }
     p {
         @include fontCustomRoboto(16px,18px,400,0.01em);
-        @include textContent;
+        color: $text-content;
     }
 
     img {
@@ -71,7 +71,7 @@
 
     &_intro {
       @include  content_1280();
-      @include bgWhite();
+      background-color: $bg-white ;
       h2 {
         text-align: center;
         margin-top: 64px;
@@ -98,7 +98,7 @@
     }
     .business-model {
       @include  content_1280();
-      @include bgWhite();
+      background-color: $bg-white ;
       &_content {
         h3 {
           margin-top: 40px;
@@ -112,8 +112,8 @@
           &___col {
             h4 {
               // @include textLimit(2);
-              @include fontCustomRoboto(24px,28.13px,600);
-              @include textTitle();
+              
+              color: $text-title ;
               text-transform: capitalize;
               margin-bottom: 8px;
             }
@@ -123,7 +123,7 @@
     }
     .benefits-top {
       @include  content_1280();
-      @include bgWhite();
+      background-color: $bg-white ;
       h3 {
         text-align: center;
         margin-top: 60px;
@@ -138,8 +138,7 @@
         .benefit {
           text-align: center;
           h4 {
-            @include fontCustomRoboto(24px,28.13px,600);
-            @include textTitle();
+            color: $text-title;
             text-transform: capitalize;
             margin-top: 24px;
             margin-bottom: 8px;
@@ -160,9 +159,7 @@
     }
     .benifits-bottom {
       @include  content_1280();
-      @include bgWhite();
-
-
+      background-color: $bg-white ;
       &_content {
         margin-top: 120px;
         margin-bottom: 140px;
@@ -171,7 +168,7 @@
         grid-template-columns: repeat(2, 1fr);
         .item {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           img {
             width: 100px;
             height: 100px;
@@ -185,7 +182,7 @@
     }
     .join-the-purchasing {
       @include  content_1280();
-      @include bgWhite();
+      background-color: $bg-white ;
       padding-top: 60px;
       padding-bottom: 100px;
       text-align: center;
@@ -193,6 +190,7 @@
         display: inline-block;
         max-width: 756px;
         margin-bottom: 48px;
+        height: 54px;
       }
       h3 {
         margin-bottom: 8px;
@@ -212,7 +210,7 @@
       padding-top: 111px;
       padding-bottom: 119px;
       @include  content_1280();
-      @include bgWhite();
+      background-color: $bg-white ;
       display: grid;
       gap: 21px;
       grid-template-columns: repeat(2, 1fr);
@@ -222,8 +220,7 @@
         border-radius: 8px;
         padding: 24px;
         h4 {
-          @include fontCustomRoboto(24px,28.13px,600);
-          @include textHeading();
+          color: $text-heading;
           text-transform: capitalize;
           margin-bottom: 20px
           // margin-top: 24px;
@@ -231,7 +228,7 @@
         }
         ul > li {
           @include fontCustomRoboto(16px,18px,400,0.01em);
-          @include textContent;
+          color: $text-content;
           margin-bottom: 20px
           
         }
@@ -240,5 +237,161 @@
         }
       }
     }
+    .partner {
+      max-width: 1540px;
+      margin: 0 auto;
+      @media (max-width:1700px) {
+        max-width: 1300px;
+      }
+      @media (max-width:1550px) {
+        max-width: 1150px;
+      }
+      @media (max-width:1350px) {
+        max-width: 992px;
+      }
+      @media (max-width:1200px) {
+        max-width: 768px;
+      }
+      @media (max-width:992px) {
+        padding: 0 25px;
+        max-width: 400px;
+      }
+      .slide-content {
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr); 
+        outline: none;
+        gap: 56px 76px;
+        max-width: 1540px;
+        margin: 0 auto;
+        img {
+          height: 90px;
+          object-fit: contain;
+        }
+        @media (max-width:1800px) {
+          gap: 40px 40px;
+          // max-width: 1440px;
+        }
+        @media (max-width:1700px) {
+          gap: 20px 20px;
+        }
+        @media (max-width:1350px) {
+          img {
+            height: 50px;
+          }
+        }
+        @media (max-width:992px) {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px 20px;
+          img {
+            height: auto;
+          }
+        }
+        @media (max-width:600px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .slick-prev:before, .slick-next:before {
+        display: none;
+        }
+      .slick-prev  {
+        width: 64px;
+        height: 64px;
+        left: -80px;
+      } 
+      .slick-next  {
+        width: 64px;
+        height: 64px;
+        right: -80px;
+      }
+      img[alt="icon-arow"] {
+        width: 62px;
+        height: 62px;
+      }
+    }
+}
 
+
+//RESPONSIVE
+@media (max-width:1440px) {
+  .about-page_intro h2 {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .about-page_intro__content {
+    margin-bottom:70px;
+  }
+  .about-page_intro__content___text {
+    padding-left: 50px;
+  }
+  .about-page .business-model_content__row {
+    margin-bottom: 50px;
+  }
+  .about-page .benefits-top h3 {
+    margin : 30px 0;
+  }
+  .about-page .benifits-bottom_content .item img {
+    width: 70px;
+    height: 70px;
+  }
+  .about-page .benifits-bottom_content {
+    margin: 40px 0;
+  }
+  .about-page .join-the-purchasing {
+    padding-bottom: 30px;
+  }
+  .impressive-business-numbers {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width:992px) { 
+  .about-page .benifits-bottom_content .item {
+    align-items: flex-start;
+  }
+  .about-page .benifits-bottom_content .item h2 {
+    @include fontCustomExo(20px,23.13px,400);
+  }
+}
+
+@media (max-width:600px) { 
+  .about-page_intro__content {
+    flex-direction: column;
+    &___img {
+      width: 100%;
+    }
+    &___text {
+      width: 100%;
+      padding-left:0;
+      .content-top {
+        margin-top: 20px;
+      }
+    }
+  }
+  .about-page .business-model_content__row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-page .benefits-top .lst-benefit {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-page .benifits-bottom_content {
+    grid-template-columns: repeat(1, 1fr); 
+    .item {
+      flex-direction: column;
+      align-items: center;
+      .item-right {
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+  }
+  .about-page .join-the-purchasing .lst-step {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-page .join-the-purchasing p {
+    margin-bottom: 20px;
+    height: auto;
+  }
+  .about-page .impressive-business-numbers {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
