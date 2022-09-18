@@ -9,17 +9,17 @@ import Big_Banner from "../../component/Banner_Category_Products/Banner_Category
 function StyleGuide() {
   return (
     <>
-    <h3>StyleGuide</h3>
-    <div>
-    <div className='session1'>
-        <Header />
-        <Banner/>
-       </div>
-      <ProductCards />
-      <Item_Slide />
-      <Big_Banner />
-      <ProductItemView/>
-    </div>
+      <h3>StyleGuide</h3>
+      <div>
+        <div className='session1'>
+          <Header />
+          <Banner />
+        </div>
+        <ProductCards />
+        <Item_Slide />
+        <Big_Banner />
+        <ProductItemView />
+      </div>
     </>
   )
 }

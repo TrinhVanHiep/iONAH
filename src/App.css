@@ -32,13 +32,20 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-.session1{
+
+.session1 {
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+}
+
+.product-item-view {
+  padding: 30px;
+  box-sizing: border-box;
 }

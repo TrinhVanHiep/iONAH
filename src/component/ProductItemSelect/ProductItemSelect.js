@@ -1,4 +1,4 @@
-import "./ProductItemSelect.css";
+import "./ProductItemSelect.scss";
 import itemImg from "../../asset/img/ProductItemSelect/tivi.png";
 import { formatMoney } from "../../common/commonFunctions";
 import AddButon from "../AddButton/AddButton";

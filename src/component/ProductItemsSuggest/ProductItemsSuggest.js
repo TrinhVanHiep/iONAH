@@ -1,4 +1,4 @@
-import "./ProductItemsSuggest.css";
+import "./ProductItemsSuggest.scss";
 import itemImg from "../../asset/img/ProductItemSuggest/wash-machine.png";
 import { formatMoney } from "../../common/commonFunctions";
 
