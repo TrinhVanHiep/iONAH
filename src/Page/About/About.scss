@@ -1,0 +1,244 @@
+// @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+@mixin fontCustomExo($fontSize, $lineHeight, $fontWeight,$letterSpacing) {
+    font-family: "Exo",sans-serif;
+    font-style: normal;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+    letter-spacing: $letterSpacing;
+  }
+
+  @mixin fontCustomRoboto($fontSize, $lineHeight, $fontWeight,$letterSpacing:"initial") {
+    font-family: "Roboto",sans-serif;
+    font-style: normal;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+    letter-spacing: $letterSpacing;
+  }
+
+  @mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @mixin content_1280 {
+   max-width: 1280px;
+   margin: 0 auto;
+  }
+
+  @mixin textHeading {
+    color: #1E24C0;
+  }
+
+  @mixin textTitle {
+    color:  #282828;
+  }
+
+  @mixin textContent {
+    color: #000000;
+  }
+
+  @mixin bgWhite {
+    background-color:#ffffff
+  }
+
+  @mixin bgGray {
+    background-color: #C1C1C1;
+  }
+
+
+.about-page {
+    h2 {
+        @include fontCustomExo(40px,46px,400,0.04em);
+        @include textHeading;
+    }
+    h3 {
+        @include fontCustomExo(32px,46px,400,0.04em);
+        @include textHeading;
+    }
+    p {
+        @include fontCustomRoboto(16px,18px,400,0.01em);
+        @include textContent;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &_intro {
+      @include  content_1280();
+      @include bgWhite();
+      h2 {
+        text-align: center;
+        margin-top: 64px;
+        margin-bottom: 120px;
+      }
+      &__content {
+        margin-bottom: 179px;
+        @include center();
+        justify-content: space-between;
+        &___img {
+          width: 50%;
+        }
+        &___text {
+          width: 50%;
+          padding-left: 150px;
+          .content-top {
+            margin-bottom: 30px;
+          }
+          h3 {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    .business-model {
+      @include  content_1280();
+      @include bgWhite();
+      &_content {
+        h3 {
+          margin-top: 40px;
+          margin-bottom: 20px;
+        }
+        &__row {
+          margin-bottom: 180px;
+          display: grid;
+          gap: 20px;
+          grid-template-columns: repeat(3, 1fr);
+          &___col {
+            h4 {
+              // @include textLimit(2);
+              @include fontCustomRoboto(24px,28.13px,600);
+              @include textTitle();
+              text-transform: capitalize;
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+    }
+    .benefits-top {
+      @include  content_1280();
+      @include bgWhite();
+      h3 {
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 65px;
+      }
+      .lst-benefit {
+        max-width: 1024px;
+        margin : 0 auto;
+        display: grid;
+        gap: 60px;
+        grid-template-columns: repeat(3, 1fr);
+        .benefit {
+          text-align: center;
+          h4 {
+            @include fontCustomRoboto(24px,28.13px,600);
+            @include textTitle();
+            text-transform: capitalize;
+            margin-top: 24px;
+            margin-bottom: 8px;
+          }
+          .benefit_stt {
+            border: 4px solid #1E24C0;
+            border-radius: 50%;
+            font-weight: bold;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .benifits-bottom {
+      @include  content_1280();
+      @include bgWhite();
+
+
+      &_content {
+        margin-top: 120px;
+        margin-bottom: 140px;
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(2, 1fr);
+        .item {
+          display: flex;
+          align-items: center;
+          img {
+            width: 100px;
+            height: 100px;
+            margin-right: 31.62px;
+          }
+          h2 {
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+    .join-the-purchasing {
+      @include  content_1280();
+      @include bgWhite();
+      padding-top: 60px;
+      padding-bottom: 100px;
+      text-align: center;
+      p {
+        display: inline-block;
+        max-width: 756px;
+        margin-bottom: 48px;
+      }
+      h3 {
+        margin-bottom: 8px;
+      }
+      .lst-step {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(4, 1fr);
+      
+        .step-item {
+          text-align: center;
+        }
+      }
+
+    }
+    .impressive-business-numbers {
+      padding-top: 111px;
+      padding-bottom: 119px;
+      @include  content_1280();
+      @include bgWhite();
+      display: grid;
+      gap: 21px;
+      grid-template-columns: repeat(2, 1fr);
+      &_item {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 24px;
+        h4 {
+          @include fontCustomRoboto(24px,28.13px,600);
+          @include textHeading();
+          text-transform: capitalize;
+          margin-bottom: 20px
+          // margin-top: 24px;
+          // margin-bottom: 8px;
+        }
+        ul > li {
+          @include fontCustomRoboto(16px,18px,400,0.01em);
+          @include textContent;
+          margin-bottom: 20px
+          
+        }
+        ul > li:last-child {
+          margin-bottom: 0
+        }
+      }
+    }
+
+}
