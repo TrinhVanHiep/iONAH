@@ -5,7 +5,6 @@ import Item_Slide from '../../component/Item_Slide_Shop_By_Brand/Item_Slide'
 import ProductItemView from '../../component/ProductItemView/ProductItemView'
 import ProductCards from '../../component/prosuctCard/ProductCard'
 import Big_Banner from "../../component/Banner_Category_Products/Banner_Category_Products"
-
 function StyleGuide() {
   return (
     <>
