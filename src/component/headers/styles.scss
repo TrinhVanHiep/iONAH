@@ -734,7 +734,7 @@
     justify-content: space-between;
     background: linear-gradient(241.13deg, #01e3a1 16.15%, #01b3a4 84.21%);
     transition: all 0.3s;
-    width: -webkit-fill-available;
+    width: calc(100vw - 20px);
     @media (max-width: 427px) {
       padding-left: 10px;
       padding-right: 10px;
