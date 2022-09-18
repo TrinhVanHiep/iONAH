@@ -11,11 +11,15 @@ const OrderDetails = () => {
         <h3 className="order-detail--title">Chi tiết đơn hàng</h3>
         <div className="order-detail--pay">
           <div className="order-detail--input">
-            <span>Thanh toán thành công</span>
+            <span className="order-detail--input__text">
+              Thanh toán thành công
+            </span>
           </div>
           <div>
             <div className="order-detail--input">
-              <span>Đơn hàng Đã được thanh toán qua</span>
+              <span className="order-detail--input__text">
+                Đơn hàng Đã được thanh toán qua
+              </span>{" "}
               <span>thẻ ATM nội địa</span>
             </div>
           </div>
