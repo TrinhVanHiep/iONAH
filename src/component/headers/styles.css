@@ -1,0 +1,207 @@
+.header{
+    width: "100%";
+}
+.header-form{
+    height: 129px;
+    background: linear-gradient(241.13deg, #01E3A1 16.15%, #01B3A4 84.21%);
+}
+.header-top{
+    height: 57px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 190px;
+}
+.button-eng{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+    text-transform: capitalize;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+}
+.button-vn{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+    text-transform: capitalize;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+}
+.bt-g{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    align-items: center;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+.language{
+    display: flex;
+    margin-left: 40px;
+}
+.form-user{
+    display: flex;
+    margin-left: 45px;
+    height: 30px;
+    align-items: center;
+}
+.logo-user{
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+}
+.img-logo-user{
+    width: 28px;
+    height: 28px;
+}
+.welcom{
+    display: block;
+    text-align: start;
+}
+.signin-register {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 0;
+}
+.text-welcom{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 0;
+}
+.text-DT{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-left: 45px;
+}
+.text-ionah{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+.header-bottom{
+    display: flex;
+    height: 72px;
+    padding-left: 191px;
+    padding-right: 187px;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    text-align: start;
+}
+.logos{
+    width: 127px;
+    height: 36px;
+}
+.header-bottom-right{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 45px;
+    align-items: center;
+}
+.input-price{
+    width: 280px;
+    height: 45px;
+    position: relative;
+}
+.input-search-price{
+    padding: 13px 12px;
+    gap: 12px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #C4C4C4;
+    width: 256px;
+    height: 19px;
+    border: none;
+}
+.drop-down{
+    position: absolute;
+    right: 12px;
+    top: 15px;
+    width: 18px;
+    height: 12px;
+}
+.input-search{
+    padding: 13px 12px;
+    gap: 11px;
+    width: 537px;
+    height: 19px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #C4C4C4;
+}
+.input-prices{
+    width: 561px;
+    height: 45px;
+    position: relative;
+}
+.icon-search{
+    position: absolute;
+    right: 12px;
+    top: 7px;
+    width: 29px;
+    height: 29px;
+}
+.book{
+    width: 21px;
+    height: 30px;
+}
+.heart{
+    width: 30px;
+    height: 27px;
+}
+.cart{
+    width: 41px;
+    height: 36.5px;
+}
+.menu{
+    height: 23px;
+    align-items: center;
+    padding: 16px 190px;
+    background: #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    width: "100%";
+    flex-wrap: wrap;
+}
+.text-menu{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #707070;
+    width: auto;
+    margin: 0;
+}
