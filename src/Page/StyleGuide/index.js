@@ -7,6 +7,9 @@ import ProductCards from '../../component/ProsuctCard/ProductCard'
 import Big_Banner from "../../component/Banner_Category_Products/Banner_Category_Products"
 import ProductImages from '../../component/ProductImage/ProductImage'
 import Popup_Choose_A_Delivery_Time from "../../component/Popup_Choose_A_Delivery_Time/index"
+import SignUpModal from '../../component/Modal/SignUpModal'
+import SignInModal from '../../component/Modal/SignInModal'
+
 function StyleGuide() {
   const [height, setHeight] = useState(0);
   const handleScroll = () => {
@@ -19,26 +22,41 @@ function StyleGuide() {
       window.removeEventListener('scroll', handleScroll);
     }
   }, [])
+
+  const [isShowSignInModal, setIsShowSignInModal] = useState(false)
+  const [isShowSignUpModal, setIsShowSignUpModal] = useState(false)
+  const handleOpen=(modalName)=>{
+    if(modalName==='signIn')
+      setIsShowSignInModal(true);
+    else
+     setIsShowSignUpModal(true);
+  }
+  const handleClose=()=>{
+    setIsShowSignUpModal(false);
+    setIsShowSignInModal(false);
+  }
+ 
   return (
     <>
-      <div>
-        <div className='session1'>
-          <Header heightsPage={height} />
-          <Banner />
-        </div>
-        <div style={{ margin: 20 }}></div>
-        <ProductCards />
-        <div style={{ margin: 20 }}></div>
-        <ProductImages />
-        <div style={{ margin: 20 }}></div>
-        <Item_Slide />
-        <div style={{ margin: 20 }}></div>
-        <Big_Banner />
-        <div style={{ margin: 20 }}></div>
-        <ProductItemView />
-        <div style={{ margin: 20 }}></div>
-        <Popup_Choose_A_Delivery_Time />
-      </div>
+    <div>
+    <div className='session1'>
+        <Header heightsPage={height} openModal={handleOpen}  />
+        <Banner/>
+       </div>
+       <div style={{margin: 20}}></div>
+      <ProductCards />
+      <div style={{margin: 20}}></div>
+      <ProductImages />
+      <div style={{margin: 20}}></div>
+      <Item_Slide />
+      <div style={{margin: 20}}></div>
+      <Big_Banner />
+      <div style={{margin: 20}}></div>
+      <ProductItemView/>
+    </div>
+    <SignInModal isShowSignUpModal={isShowSignInModal} handleClose={handleClose}/>
+    <SignUpModal isShowSignUpModal={isShowSignUpModal} handleClose={handleClose}/>
+    
     </>
   )
 }
