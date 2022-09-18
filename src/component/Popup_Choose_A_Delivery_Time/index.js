@@ -16,8 +16,10 @@ export default function Index() {
                 <div className='wrapper__popup__chosen__delivery__time__content__dropdown'>
                     <div>
                         <span>Địa chỉ</span>
-                        <div>
-                            <Dropdown label="Giờ" value={value} height="32px" width="459px" />
+                        <div className='wrap__all__dropdown'>
+                            <div className='wrap__hour'>
+                                <Dropdown label="Giờ" value={value} height="32px" width="459px" />
+                            </div>
                             <div className='wrap__date__month'>
                                 <Dropdown label="Ngày" value={value} height="32px" width="222px" />
                                 <Dropdown label="Tháng" value={value} height="32px" width="221px" />
@@ -26,8 +28,8 @@ export default function Index() {
                     </div>
                 </div>
                 <div className='wrapper__popup__chosen__delivery__time__content__button'>
-                    <Button children="Trở Lại" type='secondary' />
-                    <Button children="Lưu thay đổi" type='primary' />
+                    <Button className='button__popup__chosen__delivery__time' children="Trở Lại" type='secondary' />
+                    <Button className='button__popup__chosen__delivery__time' children="Lưu thay đổi" type='primary' />
                 </div>
             </div>
         </div>
