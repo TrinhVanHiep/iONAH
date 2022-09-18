@@ -6,7 +6,7 @@ import ProductItemView from '../../component/ProductItemView/ProductItemView'
 import ProductCards from '../../component/prosuctCard/ProductCard'
 import Big_Banner from "../../component/Banner_Category_Products/Banner_Category_Products"
 import ProductImages from '../../component/ProductImage/ProductImage'
-
+import Popup_Choose_A_Delivery_Time from "../../component/Popup_Choose_A_Delivery_Time/index"
 function StyleGuide() {
   const [height, setHeight] = useState(0);
   const handleScroll = () => {
@@ -21,22 +21,24 @@ function StyleGuide() {
   }, [])
   return (
     <>
-    <div>
-    <div className='session1'>
-        <Header heightsPage={height} />
-        <Banner/>
-       </div>
-       <div style={{margin: 20}}></div>
-      <ProductCards />
-      <div style={{margin: 20}}></div>
-      <ProductImages />
-      <div style={{margin: 20}}></div>
-      <Item_Slide />
-      <div style={{margin: 20}}></div>
-      <Big_Banner />
-      <div style={{margin: 20}}></div>
-      <ProductItemView/>
-    </div>
+      <div>
+        <div className='session1'>
+          <Header heightsPage={height} />
+          <Banner />
+        </div>
+        <div style={{ margin: 20 }}></div>
+        <ProductCards />
+        <div style={{ margin: 20 }}></div>
+        <ProductImages />
+        <div style={{ margin: 20 }}></div>
+        <Item_Slide />
+        <div style={{ margin: 20 }}></div>
+        <Big_Banner />
+        <div style={{ margin: 20 }}></div>
+        <ProductItemView />
+        <div style={{ margin: 20 }}></div>
+        <Popup_Choose_A_Delivery_Time />
+      </div>
     </>
   )
 }

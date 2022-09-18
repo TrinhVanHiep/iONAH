@@ -1,0 +1,82 @@
+.wrapper__popup__chosen__delivery__time {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    .Popup__background {
+        height: 100%;
+        width: 100%;
+        background-color: gray;
+        opacity: 0.5;
+    }
+
+    &__content {
+        background: #FFFFFF;
+        border-radius: 8px;
+        width: 668px;
+        height: 278px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 0 32px;
+
+        >div {
+            &:first-child {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 24px;
+
+                h1 {
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 23px;
+                    text-transform: capitalize;
+
+                    /* Black */
+
+                    color: #282828;
+                }
+            }
+        }
+
+        &__dropdown {
+            margin-top: 24px;
+
+            span {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 18px;
+                /* or 112% */
+
+                letter-spacing: 0.04em;
+                text-transform: capitalize;
+
+                color: #707070;
+            }
+
+            >div {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .wrap__date__month {
+                display: flex;
+                margin-top: 12px;
+                gap: 16px;
+            }
+        }
+
+        &__button {
+            display: flex;
+            margin-top: 24px;
+            gap: 20px;
+        }
+    }
+}
