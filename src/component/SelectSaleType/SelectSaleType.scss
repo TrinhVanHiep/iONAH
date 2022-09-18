@@ -1,0 +1,146 @@
+.select-sale-type {
+	box-sizing: border-box;
+	padding: 0 0 14px 0;
+	display: flex;
+	margin-bottom: 13px;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #E4E4E4;
+
+	.break-line {
+		display: none;
+	}
+
+	.item-img {
+		max-width: 80px;
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-right: 20px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.items-detail {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.item-information {
+			word-wrap: break-word;
+			width: 100%;
+
+			.item-header-sale {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				margin-bottom: 8px;
+
+				// .tag-type {
+				// 	margin-bottom: 8px;
+				// }
+
+				i {
+					width: 24.5px;
+					height: 24.5px;
+
+					svg {
+						width: 24.5px;
+						height: 24.5px;
+					}
+				}
+			}
+
+			.item-sale-percent {
+				font-family: 'Roboto', sans-serif;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 23px;
+				text-transform: capitalize;
+				color: #282828;
+				margin: 0;
+			}
+
+			.item-order {
+				font-family: 'Roboto', sans-serif;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 18px;
+				letter-spacing: 0.01em;
+				color: #707070;
+				margin: 0;
+				margin-bottom: 8px;
+			}
+
+			.item-date-exprie {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				width: 100%;
+
+				.exprie-date {
+					font-family: 'Roboto', sans-serif;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 12px;
+					line-height: 14px;
+					letter-spacing: 0.01em;
+					color: #707070;
+					margin: 0;
+				}
+
+				._button {
+					.btn {
+						min-width: 54px;
+						width: 54px;
+						height: 26px;
+						font-family: 'Roboto', sans-serif;
+						font-style: normal;
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 18px;
+						display: flex;
+						align-items: center;
+						text-align: center;
+						padding: 4px 8px;
+						gap: 8px;
+						box-sizing: border-box;
+						letter-spacing: 0.01em;
+						color: #FFFFFF;
+					}
+				}
+
+			}
+
+			.item-name {
+				font-family: 'Roboto', sans-serif;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 18px;
+				letter-spacing: 0.01em;
+				color: #282828;
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 380px) {
+	.select-sale-type {
+		.break-line {
+			display: block;
+		}
+
+		.item-img {
+			align-items: flex-start;
+		}
+	}
+}

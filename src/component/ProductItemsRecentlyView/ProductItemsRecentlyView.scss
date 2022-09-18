@@ -1,0 +1,47 @@
+.items-recently-view {
+	max-width: 240px;
+	width: 100%;
+	img {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.item-information {
+		width: 100%;
+		text-align: center;
+		.item-rate {
+			margin-bottom: 8px;
+			.rate-icon {
+				margin-right: 14px;
+				&:last-child {
+					margin-right: 0;
+				}
+				svg {
+					fill: #c4c4c4;
+					width: 20px;
+					height: 19px;
+				}
+			}
+			.rated {
+				svg {
+					fill: #ffcd4b;
+					width: 20px;
+					height: 19px;
+				}
+			}
+		}
+		.item-price {
+			margin-bottom: 20px;
+			span {
+				font-family: "Roboto", sans-serif;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 24px;
+				line-height: 28px;
+				text-align: center;
+				letter-spacing: 0.04em;
+				color: #000000;
+				text-transform: lowercase;
+			}
+		}
+	}
+}

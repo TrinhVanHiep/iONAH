@@ -1,4 +1,4 @@
-import "./ProductItemsRecentlyView.css";
+import "./ProductItemsRecentlyView.scss";
 import itemImg from "../../asset/img/ProductItemSelect/tivi.png";
 import { IconRateStar } from "../../asset/Icons/Icon";
 import AddButon from "../AddButton/AddButton";

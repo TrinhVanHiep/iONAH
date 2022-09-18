@@ -10,14 +10,14 @@ import ProductItemView from "./component/ProductItemView/ProductItemView"
 function App() {
   return (
     <div className="App">
-       <div className='session1'>
+       {/* <div className='session1'>
         <Header />
         <Banner/>
        </div>
     
       <ProductCards />
       <Item_Slide />
-      <Big_Banner />
+      <Big_Banner /> */}
       {/* <Popup_Notifi/> */}
       <ProductItemView/>
     </div>
