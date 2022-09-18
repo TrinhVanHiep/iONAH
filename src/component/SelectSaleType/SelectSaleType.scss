@@ -1,6 +1,6 @@
 .select-sale-type {
 	box-sizing: border-box;
-	padding: 0 0 14px 0;
+	padding: 0 18px 14px 18px;
 	display: flex;
 	margin-bottom: 13px;
 	background-color: #FFFFFF;
@@ -40,9 +40,23 @@
 				width: 100%;
 				margin-bottom: 8px;
 
-				// .tag-type {
-				// 	margin-bottom: 8px;
-				// }
+				@media (max-width: 450px) {
+					align-items: flex-start;
+				}
+
+				.list-tag-type {
+					display: flex;
+					align-items: center;
+					flex-wrap: wrap;
+
+					.tag-type {
+						margin-right: 16px;
+
+						@media (max-width: 450px) {
+							margin-bottom: 10px;
+						}
+					}
+				}
 
 				i {
 					width: 24.5px;
@@ -97,23 +111,48 @@
 				}
 
 				._button {
+					@media (max-width: 450px) {
+						margin-top: 15px;
+					}
+
 					.btn {
+						display: flex;
+						flex-direction: row;
+						justify-content: center;
+						align-items: center;
+						padding: 4px 8px;
+						gap: 8px;
 						min-width: 54px;
-						width: 54px;
 						height: 26px;
+						background: #1E24C0;
+						border-radius: 4px;
 						font-family: 'Roboto', sans-serif;
 						font-style: normal;
 						font-weight: 400;
 						font-size: 16px;
 						line-height: 18px;
-						display: flex;
-						align-items: center;
-						text-align: center;
-						padding: 4px 8px;
-						gap: 8px;
-						box-sizing: border-box;
 						letter-spacing: 0.01em;
 						color: #FFFFFF;
+						box-sizing: border-box;
+
+
+						&:hover {
+							color: #1E24C0;
+							background-color: #FFFFFF;
+							border: 3px solid #1E24C0;
+						}
+					}
+
+					.btn-selected {
+						background: #F6F6F6;
+						color: #1E24C0;
+						border-color: transparent;
+
+						&:hover {
+							background: #F6F6F6;
+							color: #1E24C0;
+							border-color: transparent;
+						}
 					}
 				}
 
@@ -135,10 +174,6 @@
 
 @media (max-width: 380px) {
 	.select-sale-type {
-		.break-line {
-			display: block;
-		}
-
 		.item-img {
 			align-items: flex-start;
 		}

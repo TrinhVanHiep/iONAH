@@ -1,12 +1,11 @@
 import "./TagType.scss"
 
-const TagType = () => {
+const TagType = ({ typeId, typeName }) => {
   return (
-    <div className="tag-type">
-      <span className="tag-type__title">tag type</span>
+    <div key={typeId} className="tag-type">
+      <span className="tag-type__title">{typeName}</span>
     </div>
   )
 }
 
-export default TagType
-
+export default TagType;
