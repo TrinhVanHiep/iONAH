@@ -12,6 +12,7 @@ import "./styles.scss";
 interface Props {
     heightsPage: Number;
     menu: any;
+    openModal:(modalName:string)=>{}
 }
 
 const Header = (props: Props) => {
@@ -46,7 +47,7 @@ const Header = (props: Props) => {
                   </div>
                   <div className="welcom">
                     <p className="text-welcom">Welcome</p>
-                    <Button className="signin-register">Sign in/ Register</Button>
+                    <p className="signin-register" > <span onClick={()=>props.openModal("signIn")} >Sign in</span> / <span onClick={()=>props.openModal("signUp")} >Register</span></p>
                   </div>
                 </div>
                 <div className="language">
