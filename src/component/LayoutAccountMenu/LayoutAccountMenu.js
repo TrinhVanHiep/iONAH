@@ -1,36 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import "./LayoutAccountMenu.scss"
 
-function LayoutAccountMenu() {
+function LayoutAccountMenu({ item, currentPath }) {
+  const [activeLink, setActiveLink] = useState("")
+
+  useEffect(() => {
+    if(currentPath) {
+      setActiveLink(currentPath)
+    }
+  }, [currentPath])
+
   return (
     <ul className="layout-account-menu">
       <li className="menu-items">
-        <p className="menu-items__name">My Account</p>
+        <p className="menu-items__name">{item.name}</p>
         <ul className="sub-menu">
-          <li className="sub-menu__item active">
-            <a>Thông tin tài khoản</a>
-          </li>
-          <li className="sub-menu__item">
-            <a>Địa chỉ giao hàng</a>
-          </li>
-          <li className="sub-menu__item">
-            <a>Thông tin thanh toán</a>
-          </li>
-          <li className="sub-menu__item">
-            <a>Sản phẩm yêu thích</a>
-          </li>
+           
+          {item?.listSubItem && item?.listSubItem?.map((subMenu) => (
+            <li className={`sub-menu__item ${activeLink === subMenu.url ? "active" : ""} `}>
+              <NavLink
+                to={`/account/${item.url}/${subMenu.url}`}
+                key={subMenu.name}
+                >
+                {subMenu.name}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </li>
-      {/* <li>1
-        <ul>
-          <li>sub-1</li>
-        </ul>
-      </li>
-      <li>1
-        <ul>
-          <li>sub-1</li>
-        </ul>
-      </li> */}
     </ul>
   )
 }
