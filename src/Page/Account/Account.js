@@ -3,15 +3,16 @@ import "./Account.scss"
 import Layout from '../../component/Layout';
 import LayoutAccountMenu from '../../component/LayoutAccountMenu/LayoutAccountMenu';
 import { menuList } from "./helper"
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 function Account() {
+  const currentPath = window.location.pathname
   return (
     <Layout>
       <div className="account">
         <div className="account-menu">
           {menuList.map((item) => (
-            <LayoutAccountMenu item={item} />
+            <LayoutAccountMenu item={item} currentPath={currentPath} />
           ))}
         </div>
         <div className="account-content">

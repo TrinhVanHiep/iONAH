@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import "./LayoutAccountMenu.scss"
 
-function LayoutAccountMenu({ item }) {
-
+function LayoutAccountMenu({ item, currentPath }) {
   const [activeLink, setActiveLink] = useState("")
 
-  const handleGetActiveLink = (link) => {
-
-  }
+  useEffect(() => {
+    if(currentPath) {
+      setActiveLink(currentPath)
+    }
+  }, [currentPath])
 
   return (
     <ul className="layout-account-menu">
@@ -17,10 +18,11 @@ function LayoutAccountMenu({ item }) {
         <ul className="sub-menu">
            
           {item?.listSubItem && item?.listSubItem?.map((subMenu) => (
-            <li className="sub-menu__item">
+            <li className={`sub-menu__item ${activeLink === subMenu.url ? "active" : ""} `}>
               <NavLink
                 to={`/account/${item.url}/${subMenu.url}`}
-                key={item.name}>
+                key={subMenu.name}
+                >
                 {subMenu.name}
               </NavLink>
             </li>

@@ -44,13 +44,13 @@ export const menuList = [
     url:"order-manage",
     listSubItem: [
       {   
-        id: 1,
+        id: 5,
         name: "Tất cả đơn hàng",
         url: "all-order",
         component: <AllOrder />
       },
       {   
-        id: 2,
+        id: 6,
         name: "Theo dõi đơn hàng",
         url: "order-tracking",
         component: <OrderTracking />
@@ -62,19 +62,19 @@ export const menuList = [
     url:"notification",
     listSubItem: [
       {   
-        id: 1,
+        id: 7,
         name: "Thông báo chung",
         url: "general",
         component: <GeneralNotification />
       },
       {   
-        id: 2,
+        id: 8,
         name: "Thông báo đơn hàng",
         url: "order",
         component: <OrderNotification />
       },
       {   
-        id: 3,
+        id: 9,
         name: "Thông báo khuyến mãi",
         url: "sales",
         component: <SalesNotification />
