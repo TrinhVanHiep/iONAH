@@ -78,29 +78,23 @@ function About() {
   ];
 
   const joinPurchase = [
-    {title:"Truy cập vào website iONAH và đăng nhập bằng số điện thoại.",
-    image: Step1
+    {
+      title: "Truy cập vào website iONAH và đăng nhập bằng số điện thoại.",
+      image: Step1,
     },
-    {title:"Chọn sản phẩm bạn muốn mua và xác thực cửa hàng",
-    image: Step2
+    { title: "Chọn sản phẩm bạn muốn mua và xác thực cửa hàng", image: Step2 },
+    {
+      title: "Chọn địa chỉ giao và chọn hình thức thanh toán mong muốn",
+      image: Step3,
     },
-    {title:"Chọn địa chỉ giao và chọn hình thức thanh toán mong muốn",
-    image: Step3
-    },
-    {title:"Hoàn thành",
-    image: Step4
-    },
-  ]
+    { title: "Hoàn thành", image: Step4 },
+  ];
 
   return (
     <Layout>
       {/* <div>AboutPage</div> */}
       <div className="about-page">
-        <img
-          src={Banner}
-          alt="banner_top"
-          className="about-page_banner"
-        />
+        <img src={Banner} alt="banner_top" className="about-page_banner" />
         <div className="about-page_intro">
           <h2>Giới thiệu về iONAH</h2>
           <div className="about-page_intro__content">
@@ -134,17 +128,18 @@ function About() {
         </div>
         <div className="business-model">
           <div className="business-model_img">
-            <img
-              src={Mission}
-              alt="mo_hinh_kinh_doanh"
-            />
+            <img src={Mission} alt="mo_hinh_kinh_doanh" />
           </div>
           <div className="business-model_content">
             <h3>Mô hình kinh doanh</h3>
             <div className="business-model_content__row">
               <div className="business-model_content__row___col">
                 <h4>Nền tảng mua sắm đa kênh ngắn nhất </h4>
-                <p>iONAH là một nền tảng mua sắm đa kênh bao gồm trang mua sắm trực tuyến và chuỗi cửa hàng concept store với trọng tâm ngành hàng thiết bị điện tử và điện gia dụng.</p>
+                <p>
+                  iONAH là một nền tảng mua sắm đa kênh bao gồm trang mua sắm
+                  trực tuyến và chuỗi cửa hàng concept store với trọng tâm ngành
+                  hàng thiết bị điện tử và điện gia dụng.
+                </p>
               </div>
               <div className="business-model_content__row___col">
                 <h4>Tinh giảm chuỗi cung ứng và thao tác mua hàng</h4>
@@ -170,16 +165,18 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="benefits-top">
-          <h3>Quyền lợi khi sử dụng iONAH</h3>
-          <div className="lst-benefit">
-            {benefitsTop.map((el, index) => (
-              <div className="benefit">
-                <h2 className="benefit_stt">0{index+1}</h2>
-                <h4>{el.title}</h4>
-                <p>{el.content}</p>
-              </div>
-            ))}
+        <div className="bg-white">
+          <div className="benefits-top">
+            <h3>Quyền lợi khi sử dụng iONAH</h3>
+            <div className="lst-benefit">
+              {benefitsTop.map((el, index) => (
+                <div className="benefit">
+                  <h2 className="benefit_stt">0{index + 1}</h2>
+                  <h4>{el.title}</h4>
+                  <p>{el.content}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="benifits-bottom">
@@ -198,44 +195,58 @@ function About() {
             ))}
           </div>
         </div>
-        <div className="join-the-purchasing">
-              <h3>Cách thức gia nhập hệ thống mua hàng</h3>
-              <p>iONAH mang đến khách hàng những giá trị đặc biệt và trải nghiệm tuyệt vời trong quá trình mua hàng. Hàng ngàn ưu đãi hấp dẫn trên từng model sản phẩm đang đời quý đại lý, cửa hàng. Mua càng nhiều giảm càng nhiều. Đặt hàng ngay với 3 thao tác đơn giản.</p>
-              <div className="lst-step">
-                {joinPurchase.map((el,index) =>
-                 <div className="step-item">
-                 <p>{el.title}</p>
-                 <img src={el.image} alt="join-the-purchasing-step" />
-               </div>
-                )}
-              </div>
+        <div className="bg-white">
+          <div className="join-the-purchasing">
+            <h3>Cách thức gia nhập hệ thống mua hàng</h3>
+            <p>
+              iONAH mang đến khách hàng những giá trị đặc biệt và trải nghiệm
+              tuyệt vời trong quá trình mua hàng. Hàng ngàn ưu đãi hấp dẫn trên
+              từng model sản phẩm đang đời quý đại lý, cửa hàng. Mua càng nhiều
+              giảm càng nhiều. Đặt hàng ngay với 3 thao tác đơn giản.
+            </p>
+            <div className="lst-step">
+              {joinPurchase.map((el, index) => (
+                <div className="step-item">
+                  <p>{el.title}</p>
+                  <img src={el.image} alt="join-the-purchasing-step" />
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="impressive-business-numbers">
+        </div>
+        <div className="impressive-business-numbers">
           <div className="impressive-business-numbers_item">
-              <h4>Những con số kinh doanh ấn tượng</h4>
-              <ul>
-                <li>Hơn 400 sản phẩm bao gồm điều hòa, máy giặt, máy sấy, tủ lạnh</li>
-                <li>1250 tài khoản khách hàng B2C</li>
-                <li>750 đơn hàng, hơn 11000 sản phẩm đã giao</li>
-                <li>điều hòa chiếm 90% doanh thu</li>
-                <li>Có mặt tại 20/28 tỉnh thành miền bắc</li>
-              </ul>
-            </div>
-            <div className="impressive-business-numbers_item">
-              <h4>Những chỉ số theo dõi website đáng chú ý</h4>
-              <ul>
-                <li>Số người dùng: 6.948</li>
-                <li>Lượt xem trang: 171.621 <br></br>
-(Trung bình 27.036 lượt xem trang người dùng)</li>
-                <li>Thời gian tương tác trung bình 8 phút 41 giây</li>
-                <li>Tỷ lệ tương tác trang 73/72 %</li>
-                <li>Lượt tìm kiếm sản phẩm 10.838</li>
-              </ul>
-            </div>
+            <h4>Những con số kinh doanh ấn tượng</h4>
+            <ul>
+              <li>
+                Hơn 400 sản phẩm bao gồm điều hòa, máy giặt, máy sấy, tủ lạnh
+              </li>
+              <li>1250 tài khoản khách hàng B2C</li>
+              <li>750 đơn hàng, hơn 11000 sản phẩm đã giao</li>
+              <li>điều hòa chiếm 90% doanh thu</li>
+              <li>Có mặt tại 20/28 tỉnh thành miền bắc</li>
+            </ul>
           </div>
-          <div className="partner">
-            <SliderCustom/>
+          <div className="impressive-business-numbers_item">
+            <h4>Những chỉ số theo dõi website đáng chú ý</h4>
+            <ul>
+              <li>Số người dùng: 6.948</li>
+              <li>
+                Lượt xem trang: 171.621 <br></br>
+                (Trung bình 27.036 lượt xem trang người dùng)
+              </li>
+              <li>Thời gian tương tác trung bình 8 phút 41 giây</li>
+              <li>Tỷ lệ tương tác trang 73/72 %</li>
+              <li>Lượt tìm kiếm sản phẩm 10.838</li>
+            </ul>
           </div>
+        </div>
+        <div className="bg-white">
+        <div className="partner">
+          <h2>Đối tác của iONAH</h2>
+          <SliderCustom />
+        </div>
+        </div>
       </div>
     </Layout>
   );
