@@ -9,6 +9,7 @@ import ProductImages from '../../component/ProductImage/ProductImage'
 import Popup_Choose_A_Delivery_Time from "../../component/Popup_Choose_A_Delivery_Time/index"
 import SignUpModal from '../../component/Modal/SignUpModal'
 import SignInModal from '../../component/Modal/SignInModal'
+import ShareViaSocialNetwork from '../../component/ShareViaSocialNetwork'
 
 function StyleGuide() {
   const [height, setHeight] = useState(0);
@@ -35,6 +36,17 @@ function StyleGuide() {
     setIsShowSignUpModal(false);
     setIsShowSignInModal(false);
   }
+
+  const [visibility, setVisibility] = useState(true);
+
+  const popupCloseHandler = (e) => {
+    setVisibility(e);
+  };
+
+  const box = {
+    backgroundColor:"gray",
+    padding : "30px"
+  }
  
   return (
     <>
@@ -56,6 +68,12 @@ function StyleGuide() {
     </div>
     <SignInModal isShowSignUpModal={isShowSignInModal} handleClose={handleClose}/>
     <SignUpModal isShowSignUpModal={isShowSignUpModal} handleClose={handleClose}/>
+    
+    <div style={box}>
+    <button onClick={(e) => setVisibility(!visibility)}>Share Via Social Network</button>
+    <ShareViaSocialNetwork onClose={popupCloseHandler}
+    showPopup={visibility}/>
+    </div>
     
     </>
   )
