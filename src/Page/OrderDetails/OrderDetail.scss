@@ -79,7 +79,6 @@
     background: #ffffff;
     border-radius: 8px;
     padding: 20px 0;
-    margin-bottom: 50px;
     cursor: pointer;
     .evaluate-text {
       font-weight: 400;
@@ -133,10 +132,12 @@
 
 @media screen and (max-width: 428px) {
   .order-detail {
-    padding: 0 15px 68px;
+    &--main {
+      padding: 0 20px 68px 29px;
+    }
     &--title {
       text-align: left;
-      padding: 28px 15px;
+      padding: 28px 72px 15px 28px;
       font-family: "Exo", sans-serif;
       font-weight: 400;
       font-size: 32px;
