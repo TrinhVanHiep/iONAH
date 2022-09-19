@@ -1,0 +1,62 @@
+.layout-account-menu {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 8px;
+  width: 370px;
+  height: 174px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  margin-bottom: 16px;
+
+  .menu-items {
+
+    &__name {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0.04em;
+      text-transform: capitalize;
+      color: #282828;
+      margin-bottom: 8px;
+    }
+
+    .sub-menu {
+      padding-left: 16px;
+
+      &__item {
+        margin-bottom: 4px;
+        cursor: pointer;
+
+        a {
+          font-family: 'Roboto', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 18px;
+          letter-spacing: 0.01em;
+          color: #707070;
+        }
+      }
+
+      .active {
+        margin-bottom: 4px;
+
+        a {
+          font-family: 'Roboto', sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 18px;
+          letter-spacing: 0.04em;
+          text-transform: capitalize;
+          color: #1E24C0;
+        }
+      }
+    }
+  }
+}
