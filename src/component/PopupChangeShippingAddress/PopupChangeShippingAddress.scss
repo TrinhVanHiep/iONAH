@@ -1,0 +1,78 @@
+@mixin fontCustomRoboto($fontSize, $lineHeight, $fontWeight,$letterSpacing:"initial") {
+    font-family: "Roboto",sans-serif;
+    font-style: normal;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+    letter-spacing: $letterSpacing;
+  }
+.address-radio {
+    .text-title {
+        @include fontCustomRoboto(20px,23px,600,0.04em);
+        text-transform: capitalize;
+        color: #282828;
+    }
+    .text-label {
+        @include fontCustomRoboto(16px,18px,600,0.04em);
+        text-transform: capitalize;
+        color: #282828;
+    }
+    .text-content {
+        @include fontCustomRoboto(16px,18px,400,0.01em);
+        color: #282828;
+    }
+    input[type="radio"] {
+        border: 2px solid #C4C4C4;
+        height: 27px;
+        width: 27px;
+ appearance: none;
+ -webkit-appearance: none;
+ border-radius: 50%;
+//  background: #FF572233;
+//  box-shadow: 0 0 0 1px #FF5722;
+    }
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    &_content {
+        span{
+            display: block;
+        }
+        &__name {
+            display: flex;
+            align-items: flex-start; 
+            gap: 19px;
+            margin-bottom: 12px;   
+        .btn {
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
+            button 
+            {
+            box-sizing: border-box;
+            background-color: white;
+            border: none;
+            outline: none;
+            padding: 3px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            transition: opacity 0.2s ease;
+            -webkit-user-select: none;
+            user-select: none;
+            font-family: "Roboto",sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            border: 1px solid #1E24C0;
+            letter-spacing: 0.01em;
+            color: #1E24C0;
+            }
+        }
+        }
+        .text-label ,.text-content:not(:last-child){
+            margin-bottom: 8px;
+        }
+    }
+}
