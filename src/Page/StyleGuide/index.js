@@ -9,7 +9,8 @@ import ProductImages from '../../component/ProductImage/ProductImage'
 import Popup_Choose_A_Delivery_Time from "../../component/Popup_Choose_A_Delivery_Time/index"
 import SignUpModal from '../../component/Modal/SignUpModal'
 import SignInModal from '../../component/Modal/SignInModal'
-import ShareViaSocialNetwork from '../../component/ShareViaSocialNetwork'
+import ShareViaSocialNetwork from '../../component/ShareViaSocialNetwork';
+import PopupChangeShippingAddress from "../../component/PopupChangeShippingAddress";
 
 function StyleGuide() {
   const [height, setHeight] = useState(0);
@@ -51,6 +52,9 @@ function StyleGuide() {
   return (
     <>
     <div>
+
+    <PopupChangeShippingAddress/>
+
     <div className='session1'>
         <Header heightsPage={height} openModal={handleOpen}  />
         <Banner/>
@@ -70,9 +74,10 @@ function StyleGuide() {
     <SignUpModal isShowSignUpModal={isShowSignUpModal} handleClose={handleClose}/>
     
     <div style={box}>
-    <button onClick={(e) => setVisibility(!visibility)}>Share Via Social Network</button>
+    {/* <button onClick={(e) => setVisibility(!visibility)}>Share Via Social Network</button>
     <ShareViaSocialNetwork onClose={popupCloseHandler}
-    showPopup={visibility}/>
+    showPopup={visibility}/> */}
+    
     </div>
     
     </>
